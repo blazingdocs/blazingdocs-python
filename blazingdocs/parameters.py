@@ -5,7 +5,7 @@ from .utils import Object
 class MergeParameters(Object):
     def __init__(self):
         self.dataSourceName: str = 'data'
-        self.dataSourceType: DataSourceType = DataSourceType.JSON
-        self.sequence: bool = False
+        self.dataSourceType: DataSourceType = DataSourceType.JSON  # data in json format
+        self.sequence: bool = False  # data is object
         self.parseColumns: bool = False
-        self.strict: bool = True
+        self.strict: bool = True  # keep json types

@@ -2,7 +2,7 @@ from blazingdocs import BlazingClient
 
 
 def get_usage():
-    client = BlazingClient('YOUR-API-KEY')
+    client = BlazingClient('API-KEY')
     usage = client.get_usage()
 
 

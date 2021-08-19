@@ -2,7 +2,7 @@ from blazingdocs import BlazingClient
 
 
 def get_templates():
-    client = BlazingClient('YOUR-API-KEY')
+    client = BlazingClient('API-KEY')
     templates = client.get_templates()
 
 

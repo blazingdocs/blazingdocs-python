@@ -2,7 +2,7 @@ from blazingdocs import BlazingClient, MergeParameters, FormFile
 
 
 def merge():
-    client = BlazingClient('YOUR-API-KEY')
+    client = BlazingClient('API-KEY')
     parameters = MergeParameters()
     parameters.sequence = True
 

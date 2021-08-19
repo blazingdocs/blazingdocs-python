@@ -2,7 +2,7 @@ from blazingdocs import BlazingClient, MergeParameters
 
 
 def merge():
-    client = BlazingClient('YOUR-API-KEY')
+    client = BlazingClient('API-KEY')
     parameters = MergeParameters()
 
     with open('templates/PO-Template.json', 'r', encoding='utf-8') as f:

@@ -2,7 +2,7 @@ from blazingdocs import BlazingClient
 
 
 def get_account():
-    client = BlazingClient('YOUR-API-KEY')
+    client = BlazingClient('API-KEY')
     account = client.get_account()
 
 
