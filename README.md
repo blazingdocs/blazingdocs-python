@@ -37,41 +37,7 @@ templates = client.get_templates()
 usage = client.get_usage()
 ```
 
-### Executing merge with template id
-
-```python
-client = BlazingClient('API-KEY')
-parameters = MergeParameters()
-
-with open('templates/PO-Template.json', 'r', encoding='utf-8') as f:
-    data = f.read()
-
-operation = client.merge_with_id(
-    data=data,
-    filename='output.pdf',
-    parameters=parameters,
-    template=uuid.UUID('TEMPLATE-ID')
-)
-```
-
-### Executing merge with relative path
-
-```python
-client = BlazingClient('API-KEY')
-parameters = MergeParameters()
-
-with open('templates/PO-Template.json', 'r', encoding='utf-8') as f:
-    data = f.read()
-
-operation = client.merge_with_relative_path(
-    data=data,
-    filename='output.pdf',
-    parameters=parameters,
-    template='RELATIVE-PATH'  # e.g. 'folder/nested_folder/Template.docx'
-)
-```
-
-### Executing merge with form file
+### Executing merge
 
 ```python
 client = BlazingClient('API-KEY')
@@ -82,28 +48,6 @@ with open('templates/PO-Template.json', 'r', encoding='utf-8') as f:
 
 with open('templates/PO-Template.docx', 'rb') as f:
     file = FormFile('PO-Template.docx')
-    file.content = f.read()
-
-operation = client.merge_with_form_file(
-    data=data,
-    filename='output.pdf',
-    parameters=parameters,
-    template=file
-)
-```
-
-### Executing merge with array
-
-```python
-client = BlazingClient('API-KEY')
-parameters = MergeParameters()
-parameters.sequence = True # data is array
-
-with open('templates/PO-Template-Array.json', 'r', encoding='utf-8') as f:
-    data = f.read()
-
-with open('templates/PO-Template-Array.docx', 'rb') as f:
-    file = FormFile('PO-Template-Array.docx')
     file.content = f.read()
 
 operation = client.merge_with_form_file(
