@@ -17,7 +17,7 @@ setup(
     download_url="https://github.com/blazingdocs/blazingdocs-python",
     keywords=["doc", "docx", "pdf", "odt", "report", "document", "template", "office", "openoffice", "merge", "xml", "json", "csv"],
     install_requires=["requests>=2.26.0"],
-    python_requires=">=3.9",
+    python_requires=">=3.4",
     project_urls={
         "Bug Tracker": "https://github.com/blazingdocs/blazingdocs-python/issues",
         "Documentation": "https://docs.blazingdocs.com",
@@ -28,6 +28,11 @@ setup(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Topic :: Software Development :: Libraries :: Python Modules", ],
     license="MIT"
