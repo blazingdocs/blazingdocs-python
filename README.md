@@ -41,7 +41,11 @@ usage = client.get_usage()
 
 ```python
 client = BlazingClient('API-KEY')
+
 parameters = MergeParameters()
+parameters.dataSourceType = DataSourceType.JSON  # data in json format
+parameters.sequence = False  # data is object
+parameters.strict = True  # keep json types
 
 with open('templates/PO-Template.json', 'r', encoding='utf-8') as f:
     data = f.read()
